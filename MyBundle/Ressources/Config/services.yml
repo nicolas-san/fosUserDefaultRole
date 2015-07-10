@@ -1,0 +1,6 @@
+services:
+    my_bundle.registration_success:
+        class: MyBundle\EventListener\RegistrationSuccessListener
+        arguments: [@router]
+        tags:
+            - { name: kernel.event_subscriber }

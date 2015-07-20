@@ -6,7 +6,8 @@
  * @author Bouteillier Nicolas <http://www.kaizendo.fr>
  */
 
-namespace N2P\BaseUserBundle\EventListener;
+/* fixme add your own namespace here */
+namespace MyBundle\EventListener;
 
 use FOS\UserBundle\FOSUserEvents;
 use FOS\UserBundle\Event\FormEvent;

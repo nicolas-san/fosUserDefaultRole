@@ -1,7 +1,9 @@
 <?php
+
 /**
- * Simple listener to add ROLE_USER by default for each registrated user
- * @author Bouteillier Nicolas http://www.kaizendo.fr
+ * Simple listener to add ROLE_USER by default for each registrated user.
+ *
+ * @author Bouteillier Nicolas <http://www.kaizendo.fr>
  */
 
 namespace N2P\BaseUserBundle\EventListener;
@@ -9,11 +11,10 @@ namespace N2P\BaseUserBundle\EventListener;
 use FOS\UserBundle\FOSUserEvents;
 use FOS\UserBundle\Event\FormEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 /**
- * Listener responsible to change the redirection at the end of the password resetting
+ * Listener responsible to change the redirection at the end of the password resetting.
  */
 class RegistrationSuccessListener implements EventSubscriberInterface
 {
@@ -40,7 +41,5 @@ class RegistrationSuccessListener implements EventSubscriberInterface
         /** @var $user \FOS\UserBundle\Model\UserInterface */
         $user = $event->getForm()->getData();
         $user->addRole('ROLE_SELLER');
-        /*$user = $event->getUser();
-        $user->addRole('ROLE_USER');*/
     }
 }

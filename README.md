@@ -37,8 +37,4 @@ public function addRole($role)
 ```
 
 
-If you try to add ROLE_USER, as ROLE_USER is ROLE_DEFAULT, you role is not added to 
-
-```$this->roles[]```
-
-and not persisted, it is why even with a good working listener, ROLE_USER is never write into user account details in database.
+If you try to add ROLE_USER, as ROLE_USER is ROLE_DEFAULT, you role is not added to  *$this->roles[]* and not persisted, it is why even with a good working listener, ROLE_USER is never write into user account details in database.
